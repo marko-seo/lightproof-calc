@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')
+
+.calc
+	font-family: 'Open Sans', sans-serif;
+	*
+		box-sizing: border-box
+
+.calc__inner
+	width: 100%
+	margin: 0 auto
+	max-width: 1002px
+	position: relative
+	transform: scale(.9)
+	background-color: #ffffff
+	box-shadow: 0 0 27px rgba(0,0,0,.11)
+
+.calc__head
+	display: flex
+	font-size: 23px
+	padding: 0 12px
+	text-align: center
+	align-items: center
+	justify-content: space-between
+	&:before,
+	&:after
+		content: ''
+		height: 2px
+		flex-grow: 2
+		max-width: 443px
+		background-color: #85A5AF
+	&:before
+		margin-right: 12px
+	&:after
+		margin-left: 12px
+
+.calc__inner
+	display: flex
+
+.calc__left
+	width: 50% 
+	padding: 30px 20px 0px
+	background-color: #fff
+
+.calc__right
+	width: 50%
+	background-color: #383838
+
+.calc-nav
+	position: relative
+
+.calc-nav__prev
+	width: 35px
+	height: 28px
+	display: block
+	font-size: 45px
+	cursor: pointer
+	line-height: 18px
+	text-align: center
+	position: absolute
+	box-sizing: border-box
+	color: rgba(0,0,0,.8)
+
+.calc-form__select
+	padding: 5px
+	font-size: 20px	
+
+.calc__calc-nav
+	margin-bottom: 30px
+
+.calc-nav__list
+	padding: 0
+	display: flex
+	margin: 0 0 15px
+	justify-content: center
+	list-style-type: none	
+
+.calc-nav__item
+	margin: 0 10px
+	font-size: 20px
+	font-weight: bold
+	&:first-letter
+		text-transform: uppercase
+	color: rgba(187, 170, 94, .5)
+	&.calc-nav__item--active
+		color: rgba(187, 170, 94, 1)
+
+.calc-nav__stages-caption
+	color: #BBAA5E
+	font-size: 27px
+	font-weight: bold
+
+.calc-nav__stages-num
+	font-size: 20px
+	padding-left: 10px
+
+.calc-filters
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+
+.calc-circle
+	width: 100%
+	padding: 0 5px
+	cursor: pointer
+	text-align: center
+	max-width: 145px
+	&.calc-circle--disable
+		opacity: .5
+		pointer-events: none
+
+.calc__calc-circle
+	margin-bottom: 40px
+
+.calc-circle__img 
+	width: 100% 
+	display: flex
+	justify-content: center
+	margin-bottom: 10px
+	img
+		width: 120px
+		height: 120px
+		overflow: hidden
+		// border-radius: 50%
+		// object-fit: cover
+
+.calc-circle__capt
+	margin: 0
+	line-height: 1.4
+	text-align: center
+	position: relative
+	display: inline-block
+
+.calc-circle_text
+	opacity: .5
+	font-size: 18px	
+	
+.calc-tooltip
+	top: 0
+	width: 12px
+	height: 12px
+	right: -18px
+	line-height: 1
+	text-align: center
+	border-radius: 50%
+	position: absolute
+	display: inline-block
+	background-color: rgba(0,0,0,.5)
+	small 
+		color: #fff
+		line-height: 1.1
+		font-size: 10px
+		font-weight: bold
+		vertical-align: super
+	&:hover
+		.calc-tooltip__content
+			opacity: 1
+			pointer-events: auto
+
+.calc-tooltip__content
+	opacity: 0
+	width: 100vw
+	z-index: 3
+	font-size: 12px	
+	color: #000
+	max-width: 268px
+	text-align: left
+	padding: 4px 10px
+	border-radius: 4px
+	font-weight: normal
+	text-transform: lowercase
+	position: absolute
+	pointer-events: none
+	left: calc(100% + 6px)
+	background-color: #F1F1F1
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.13)
+	transition: all .3s ease
+	ul 
+		margin: 0
+		padding: 0
+		list-style-type: none
+	li 
+		line-height: 1.3
+
+.calc__right
+	padding: 40px 20px 30px
+
+.calc-form--opacity
+	opacity: .5
+	pointer-events: none
+	// .calc-form__sum
+		// visibility: hidden
+
+.calc-form__title
+	margin: 0 0 10px
+	font-size: 18px
+	color: #BBAA5E
+	font-weight: bold
+	margin-bottom: 10px
+	position: relative
+	text-transform: uppercase
+
+.calc-form__nofield
+	border: none
+	color: #fff
+	font-size: 20px
+	margin-bottom: 20px
+	background-color: transparent
+
+.calc-form__fieldset
+	padding: 0
+	border: none
+	margin-bottom: 20px
+	.calc-form__group
+		max-width: 43%
+		flex-wrap: wrap
+		align-items: center
+		display: inline-flex
+
+.calc-form__comment
+	width: 100%
+	color: #fff
+	padding: 7px 0 
+
+.calc-form__field
+	width: 100%
+	font-size: 20px
+	max-width: 153px
+	padding: 5px 10px
+	font-weight: 600
+	margin-right: 10px
+	outline: none
+	&:focus
+		outline: none
+	&:disabled
+		background-color: rgba(225,225,225,.9)
+		border-color: rgba(225,225,225,.9)
+
+.calc-form__metrics
+	color: #ffffff
+	font-size: 20px
+
+.calc-form__to
+	line-height: 1
+	padding: 0 20px
+	font-size: 30px
+	color: #BBAA5E
+	vertical-align: middle
+	display: inline-block
+
+.check__box
+	width: 18px
+	height: 18px
+	margin-right: 10px
+	display: inline-block
+	border: 1px solid rgba(0,0,0,.34)
+	background-color: #fff
+	position: relative
+	&::before
+		content: ''
+		width: 14px
+		height: 11px
+		display: none
+		left: calc(50% - 7px)
+		top: calc(50% - 5.5px)
+		background: url('/img/check-true.svg') no-repeat center
+		background-size: contain
+		position: absolute
+
+.check__text
+	color: #fff
+	font-size: 20px
+	vertical-align: bottom
+
+.calc-form__check
+	&:first-of-type
+		margin-right: 30px
+
+.check__input
+	display: none
+	&:checked ~ .check__box
+		border-color: #BBAA5E
+		&::before	
+			display: block
+		
+.calc-form__title
+	.calc-tooltip
+		background-color: #BBAA5E
+		small
+			color: #000
+
+.calc-form__sum
+	width: 100%
+	border: none
+	color: #BBAA5E
+	font-size: 55px
+	line-height: 1.1
+	font-weight: bold
+	margin-bottom: 20px
+	background-color: transparent
+
+.calc-form__action
+	width: 100%
+	margin: 0 auto
+	max-width: 300px
+	padding-top: 25px
+
+.calc-form__btn
+	width: 100%
+	color: #000
+	font-size: 28px
+	cursor: pointer
+	max-width: 300px
+	padding: 11px 20px
+	margin-bottom: 15px
+	border: 1px solid #BBAA5E
+	background-color: #BBAA5E
+
+.calc-form__info
+	color: #fff
+	font-size: 18px
+	margin: 0
+	text-align: center
+
+.calc-download
+	display: flex
+	height: calc(100% - 110px)
+
+.calc-download__text
+	margin: auto
+	font-weight: 600
+	font-size: 34px
+	color: rgba(0,0,0,.6)
+
+.calc_swiper-slide
+	padding: 0 30px
+
+.calc__products
+	display: flex
+	flex-wrap: wrap
+	margin-left: -10px
+	margin-right: -10px
+	
+.calc__product-wrap
+	padding: 0 10px
+	margin-bottom: 20px
+	
+.calc__product
+	width: 85px
+	height: 85px
+	border-radius: 50% 
+	text-align: center
+	position: relative
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&::before
+		content: ''
+		top: 0
+		left: 0
+		z-index: 3
+		width: 100%
+		height: 100%
+		display: none
+		border-radius: 50%
+		box-sizing: border-box
+		border: 6px solid #BBAA5E
+		position: absolute
+	&.calc__product--active
+		&::before
+			display: block
+
+
+.calc__swiper-container
+	.swiper-button-next
+		top: calc(50% - 20px)
+		right: 0
+		color: #4E5045  
+	.swiper-button-prev
+		top: calc(50% - 20px)
+		left: 0
+		color: #4E5045
+	
+.calc__swiper-action
+	padding-top: 10px
+	text-align: center
+
+.calc__swiper-btn
+	padding: 0 
+	border: none	
+	cursor: pointer
+	font-size: 20px
+	background: none
+	font-weight: 600
+	color: #BBAA5E
+
+.calc__slider-inner
+	height: 420px
+
+.calc__swiper-container
+	width: 100%
+	height: 100%
+
+.calc-form__feedback 
+	top: 0
+	left: 0
+	z-index: 3
+	width: 100%
+	height: 100%
+	border: none
+	background-color: rgba(0,0,0,.7)
+	position: absolute
+
+.calc-form__feedback-inner
+	width: 100%
+	padding: 30px 15px
+	display: flex
+	max-width: 300px
+	margin: 150px auto 0 
+	position: relative
+	background-color: #ffffff
+	flex-direction: column
+	.calc-form__field
+		max-width: 100%
+		margin-bottom: 15px
+
+.calc-form__small-btn
+	width: 100%
+	color: #000
+	cursor: pointer
+	font-size: 18px
+	font-weight: 600
+	padding: 11px 20px
+	margin-bottom: 15px
+	border: 1px solid #BBAA5E
+	background-color: #BBAA5E
+
+.calc-form__feedback-close
+	top: 5px
+	right: 5px
+	width: 20px
+	height: 20px
+	color: #000
+	cursor: pointer
+	text-align: center
+	line-height: 20px
+	font-size: 30px
+	position: absolute
+
+.calc-form__message
+	min-height: 150px
+	color: #fff
+	display: flex
+	font-size: 23px
+	font-weight: 600
+	text-align: center
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
+	
+	
